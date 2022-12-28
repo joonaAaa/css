@@ -1,0 +1,130 @@
+body {
+    font-family: Georgia;
+}
+
+
+/*? CAPA DE CONTENIDO */
+.card {
+    background-color:rgb(162, 9, 39);
+    color: rgb(255, 255, 255);
+    width: auto;
+    
+
+    /* max-width: 300px; */
+    /*! NOS PERMITE DEFINIR UN ANCHO MAXIMO */
+
+    /* min-width: 200px ; */
+    /*! NOS PERMITE DEFINIR UN ANCHO MINIMO, OSEA NO VA A PODER MEDIR MENOS DE ESTO */
+
+    width: 300px;
+    /** ACA NO PODEMOS COLOCAR UN WIDHT MENOS DE 200 Y MAXIMO DE 300 PORQUE YA LO DEFNIMOS MAS ARRIBA */
+
+    /* max-height: 500px; */
+    /*! ALTURA MAXIMA,FUNCIONA IGUAL QUE EL WIDHT */
+
+    /* min-height: 300px; */
+    /*!ALTURA MINIMA, FUNCIONA IGUAL QUE EL WIDHT */
+
+    /* padding: 20px 40px 60px 80px; */
+    /*! ARRIBA-DERECHA-ABAJO-IZQUIERDA */
+    /* padding-top: 20px;
+padding-right: 40px;
+padding-bottom: 60px;
+padding-left: 80px; */
+
+/*! SI QUIERO USAR SOLO 3 VALORES:ARRIBA-DERECHA Y IZQUIERDA-ABAJO */
+/* padding: 20px 40px 60px ; */
+
+/*! SI QUIERO USAR 2 VALORES:ARRIBA Y ABAJO-IZQUIERDA Y DERECHA */
+padding: 15px 45px;
+
+
+/*? border: 3px solid red; */
+
+/** border-width: 20px 70px 50px 30px; */
+/*! LO MISMO QUE MUCHOS SHORTHAND- ARRIBA,DERECHA,ABAJO,IZQUIERDA */
+/* border-top-width:20px ;
+border-right-width:70px ;
+border-bottom-width:50px ;
+border-left-width:30px ; */
+
+
+
+/** border-style: dotted dashed double solid; */
+/*! DEFINE LOS ESTILOS DEL BORDER */
+/*! LO MISMO QUE TODOS LOS SHORTHAND-ARRIBA,DERECHA...... */
+/* border-top-style:dotted ;
+border-right-style:dashed ;
+border-bottom-style:double ;
+border-left-style:solid ; */
+
+
+
+/** border-color:crimson black yellow purple ; */
+/* border-top-color:crimson ;
+border-right-color: black;
+border-bottom-color:yellow ;
+border-left-color: purple ; */
+
+
+/* TODO LO DE ARRIBA SE RESUMEN EN ESTO,(BORDER) COLOR,ESTILO,ANCHO*/
+border:crimson groove 20px ;
+
+box-sizing: border-box;
+/*! La propiedad CSS box-sizingnos permite incluir el relleno y el borde en el ancho y alto total de un elemento. */
+/* !WIDHT Y HEIGHT SON DEFINITIVAS, OSEA SERIA DE 400X400 EN ESTE CASO */
+width:400px;
+height: 400px;
+padding: 5px;
+border: 5px solid chocolate;
+}
+
+
+
+.card--one{
+    /** margin: 50px 20px 10px 20px; */
+    /* margin-top:50px ;
+    margin-right:20px ;
+    margin-bottom:10px ;
+    margin-left:20px ; */
+
+/*? margin-right: auto;*/
+/*?margin-left: auto;     ESTA ES UNA FORMA DE CENTRAR LOS ELEMENTOS*/
+
+margin: 0 auto; 
+/*! ESTA ES UNA MEJOR FORMA DE CENTRAR LOS ELEMENTOS */
+/* !AUNQUE TIENE QUE CUMPLIR 2 REGLAS: TENER UN WIDHT DEFINIDO Y DISPLAY=BLOCK */
+}
+
+.card--two{
+    width:400px;
+    height: 400px;
+    padding: 5px;
+    border: 5px solid chocolate;
+    margin-left: -100px;  
+    /*! TAMBIEN EXISTEN MARGENES NEGATIVOS */
+}
+.card__title{
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.card__paragraph{
+    margin-bottom: 30px
+}
+
+
+/*? COLAPSO DE MARGENES */
+.main{
+    background-color: steelblue;
+    color: white;
+    /* margin-bottom: 100px; 
+    PREDOMINA EL MARGIN MAS ALTO*/
+}
+
+.footer{
+    background-color: slateblue;
+    color: white;
+/* margin-top:200px; 
+    PREDOMINA EL MARGIN MAS ALTO*/
+}

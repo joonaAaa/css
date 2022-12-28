@@ -1,0 +1,48 @@
+/* CASCADA DEFINE QUE ELEMENTOS PREDOMINARAN EN CASO DE HABER MAS DE UN SELECTOR QUDD CAMBIE LOS MISMOS
+ESTILOS DE UN ELEMENTO */
+/*! QUE SIEMPRE VENDRIA SIENDO EL ULTIMO ESCRITO */
+
+/* #title{
+    color: purple;
+}
+
+.title{
+    color: brown;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} */
+
+h1{
+    color: royalblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color: crimson;
+    font-family: cursive;
+}
+
+/* LA ESPECIFICIDAD ES LA IMPORTANCIA QUE SE LE DA A LOS ELEMENTOS QUE QUEREMOS MODIFICAR */
+/* *h1= 1
+*  .h1=10
+*  #h1=100 */
+
+
+/* LA HERENCIA ES LO QUE HEREDAN LOS ELEMENTOS HIJOS DE LOS PADRES */
+
+
+/*! ELEMENTO PADRE */
+body{
+    border: 3px solid orange;
+    font-family: 'Times New Roman', Times, serif;
+    color: steelblue;
+}
+
+/*! ELEMENTO HIJO */
+.title{
+    /* border:3px solid orange; 
+    NO ESTARIA DEL TODO MAL PERO SE PUEDE MEJORAR CON INHERIT
+    QUE VENDRIA SIENDO QUE HEREDE(INHERIT) DEL ELEMENTO PADRE LA MODIFICACION*/
+border: inherit;
+color: inherit;
+font-family: inherit;
+}

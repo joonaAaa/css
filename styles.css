@@ -1,0 +1,258 @@
+/* CON ESTO ESTA MODFICANDO TODO EL CONTENIDO DE LA ETIQUETA BODY*/
+/* PARA LLAMAR A ETIQUETAS SOLO SE PONE EL NOMBRE DE ESA ETIQUETA */
+body{
+    color: rgb(3, 18, 13);
+    background-color: blanchedalmond;
+}
+
+
+/* PARA LLAMAR A ID SE UTILIZA # */
+#titulo{
+    color: blue;
+}
+
+
+/* PARA LLAMAR CLASES SE UTILIZA (.) */
+.texto{
+    /* color: brown; */
+}
+
+
+/* A TODA LAS ETIQUETAS DE (P) QUE CONTEGAN LA CLASE TEXTO LAS MODIFICARE  */
+p.texto{
+color: blueviolet;
+}
+
+
+/* DEPENDE EN EL ORDEN EN QUE HAGAMOS LOS CAMBIOS
+SE SOBREESCRIBIRAN, POR EJEMPLO
+EN P.TEXTO LE AGREGUE UN COLOR Y EN P.ESPECIAL LE CAMBIE ESE COLOR Y
+QUEDO CON EL ULTIMO COLOR */
+p.especial{
+    color: aqua;
+}
+
+
+ /* EN TODAS NUESTRAS ETIQUETAS DE DIV  QUE CONTEGAN HIJOS DE ETIQUETAS P QUIERO QUE TENGAS ESTE ESTILO */
+/* SERIA DIV ESPACIO P ESPACIO */
+div p {
+color: blueviolet;
+}
+
+
+/* ESTO ES LO MISMO QUIERO CAMBIAR ESTILOS A TODO LO QUE CONTENGA LA ETIQUETA H2 O H3 Y QUE ESTE DENTRO DE DIV */
+div h2, div h3{
+    color: brown;
+}
+
+
+/* EL * ES UN SELECTOR UNIVERSAL , MODIFICA TODO LO QUE ESTE EN ESA CLASE */
+/* SOLO SE MODIFICARA CON EL * SI ANTES NO HA SIDO MODIFADA EL ELEMENTO QUE QUEREMOS MODIFICAR */
+*{
+    font-size: 24px; /* MODIFICA EL TAMAÑO DE LA LETRA */
+    /* color: black; ESTE NO FUNCIONA PORQUE YA FUE MODIFICADO ANTES */
+}
+
+.color{
+    /* color: #eee el primero es rojo,verde,azul */
+
+    /* color: #ff0000 MAS ESPECIFICO ROJO 2, VERDE 2 ,AZUL 2 */
+
+    /* color:rgb(0, 255, 255);ULTRA ESPECIFICO */
+
+/* border:5px black solid PARA ASIGANAR UN BORDE, PRIMERO ES EL GROSOR DEL BORDE, LUEGO EL COLOR, LUEGO EL ESTILO */
+    /* DIFERENTOS TIPOS DE ESTILOS
+dotted
+dashed
+solid
+double
+groove
+ridge
+inset
+outset
+none
+hidden
+    */
+border-style: solid; /*ASIGNAR EL ESTILO DEL BORDE MAS DIRECTO*/
+border-color: blueviolet; /* ASIGNAR EL COLOR DEL BORDE MAS DIRECTO */
+border-radius: 5px; /*LE ASIGNAMOS UNA REDONDES AL BORDE*/
+border-width: 1rem; /*ANCHO DEL BORDE*/
+}
+
+
+
+#fondo{
+background-color: rgba(255, 0, 0); /* COLOR AL RECIPIENTE DEL ELEMENTO-- EL ULTIMO ES LA OPACIDAD*/
+/* opacity:0.3 ; LE AGREGAMOS OPACIDAD AL ELEMENTO COMPLETO */
+
+/* background-image: url('coffee.png'); COLOCAMOS UNA IMAGEN DE FONDO */
+
+height: 200px; /*ALTO */
+/* background-size:100px 100px;  ANCHO LUEGO ALTO DE LA IMAGEN */
+
+
+/* background-repeat: no-repeat; NO SE REPETIRA LA IMAGEN */
+/* background-repeat: repeat-x; SE REPETIRA SOLO VERTICALMENTE */
+/* background-repeat: repeat-y; /*SE REPETIRA SOLO HORIZONTALEMENTE */
+
+/* background-position: right bottom;  CAMBIAR LA POSICION DONDE SE REPETIRA LA IMAGEN PRIMERO HORIZONTALMENTE LUEGO VERTICAL */
+background:#f00 url('coffee.png') repeat-y center bottom /100px 100px;/* ESTA LINEA HACE LAS MISMAS MODIFICACIONES ARRIBA SOLO EN UNA LINEA DE CODIGO*/
+/* PRIMERO EL COLOR , LUEGO LA IMAGEN , EN QUE POSICION SE REPETIRA, LUEGO LA POSICION DE LA REPETICION, LUEGO LAS DIMENSIONES DE LA IMAGEN */
+}
+
+
+.margen{
+    background-color: rebeccapurple;
+
+
+    margin:15px; /*20px 25px 30px ;*/ /*PRIMERO MARGEN DE ARRIBA, DERECHA,ABAJO,IZQUIERDA */
+    /* AGREGA UN ESPACIO AFUERA DEL ELEMENTO, SE AGREGAN ESPACIOS FUERA DEL ELEMENTO*/
+
+    padding: 30px 25px 20px 15px ; /*ARRIBA,DERECHA,ABAJO,IZQUIERDA*/
+    /* AGREGA UN ESPACIO DENTRO DEL ELEMENTO */
+
+    border: solid 1px black;
+    height: 300px;
+    width: 300px;
+
+    overflow: scroll; /*CMBIAR LA VISIBILIDAD DEL CONTENIDO DEL ELEMENTO*/
+outline: 1px solid red ;     /* ES COMO UN BORDEN QUE SE COLOCA POR AFUERA DEL BORDE*/
+}
+
+.text{
+    font-family:'martian mono' , sans-serif;  /*CAMBIAR LA FUENTE DEL TEXTO*/
+    text-align: end ;      /*PARA PODER DEJAR EL TEXTO CENTRADO, A LA IZQUIERDA DONDE SEA*/
+text-decoration:overline ; /*DECORACION A LOS TEXTOS*/
+text-shadow: 3px 5px 5px blue ; /*ASIGNAR UN SOBREADO AL TEXTO*/
+/* PRIMERO CUANTO SE MUEVE LA SOMBRA A LA DERECHA LUEGO HACIA ABAJO LUEGO LA CANTIDAD DE DIFUMINADO A LA SOMBRA Y EL COLOR */
+}
+
+
+/* EL ORDEN ES MUY IMPORTANTE PRIMERO ES LINK,VISITED,HOVER,ACTIVE */
+/* SELECCIONAR TODOS LOS LINK, CUANDO EL LINK NO HA SIDO SELECCIONADO */
+a:link {
+    color: blueviolet;
+}
+/* SELECCIONA TODOS LOS LINK QUE YA HAN SIDO VISITADO */
+a:visited {
+color: gray;
+}
+/* CUANDO PASO EL MOUSE POR ENCIMA DEL LINK */
+a:hover{
+    color: yellow;
+}
+ /* CUANDO ESTOY PINCHANDO EL LINK */
+a:active{
+    color: red;
+}
+
+
+ul{
+    background-color: cyan;
+    /* list-style-type:georgian ; CAMBIA EL ESTILO DE LA LISTAS, LO QUE SALE AL PRINCIPIO */
+    /* padding-left:0 ; */
+    /* list-style-position: inherit;  POSICION DE LA LISTA, LO QUE VA AL PRINCIPIO, NO SE USA MUCHO*/ 
+}
+
+table {
+    width: 100%; 
+    border-collapse:collapse ; /* CAMBIA LA SEPARACION DE LAS LINEAS EN LA TABLA, EN ESTE CASO LAS JUNTA*/
+}
+
+th,td {
+    border: solid 1px black;
+    padding: 5px;
+}
+
+th{
+    background-color: tomato;
+    color: white;
+    text-align: left;
+}
+
+
+/* SELECCIONAR SOLO A ELEMENTO EN PARTICULAR??? */
+tr:nth-child(even){
+    background-color: #eee;
+}
+
+/* CAMBIANDOLE EL COLOR Y EL DISEÑO DEL MOUSE */
+tr:hover{ /*RECUERDDA CON HOVER SIRVE PARA CAMBIAR ALGO CUANDO PASE EL MOUSE POR ENCIMA DEL ELEMENTO*/
+    background-color: aquamarine;
+
+    cursor: pointer; /*LE DA UN DISEÑO AL CURSO, AL MOUSE, COMO QUE LO MODIFICA*/
+}
+
+
+/* COLOCANDOLE UN ESPACIO DE LINEA */
+span{
+   display:block;  /* DISPLAY HACE QUE LOS ELEMENTOS NO HAGAN SALTOS DE LINEA Y QUEDEN AL LADO O SI HAGAN SALTO,ETC */
+/* display: none; HACE DESAPARECER A LOS ELEMENTOS */
+/* visibility: hidden; TAMBIEN HACE DESAPARECER A LOS ELEMENTOS */
+max-width: 300px; /*ANCHO MAXIMO ES DE 300 PERO DEPENDE DEL DISPOSITIVO SE PUEDE REDUCIR*/
+background-color: #f00;
+}
+
+
+/* SACANDOLE EL ESPACIO QUE TIRA AUTOMATICAMENTE */
+.inline{
+    display:inline;
+}
+
+
+/* COLOCANDO UNA POSICION  */
+#position{
+    position:sticky ; /*ES UNA MEZCLA DE FIXED Y RELATIVE*/
+    /* position: fixed; EL ELEMENTO SE QUEDA PEGADO A LA PANTALLA DONDE SEA QUE BAJEMOS O SUBAMOS */
+    left: 20px;
+    top: 25px; /* CUANTO QUIERE QUE SE MUEVA PARA ABAJO*/ 
+}
+
+
+/* COLOCANDO LA IMAGEN A LA DERECHA CON SU LATO Y ANCHO RESPECTIVO */
+.left{
+    float: left; /*PARA POSICIONAR ALGO A LA IZQUIERDA O DERECHA CON SU CONTENIDO??*/
+    width: 200px;
+    height: 200px;
+}
+
+
+/* COLOCANDO AL LADO IZQUIERDO A LAS CELDAS (2)*/
+.right{
+    float: left;
+}
+
+
+/* ALTO A LOS CONTENIDO DE LA CLASE CONTAINER */
+.container{
+    height: 200px;
+}
+
+
+/* ASIGNANDO UNAS CELDAS  (1)*/
+.column{
+    /* border: solid 1px #ddd;
+    border-radius:5px ; */
+    margin:  0px;
+    padding: 10px 0px;
+    width: 32%;
+    border: solid;
+}
+
+
+/* SOLO ASIGNADO UN ALTO Y COLOR */
+.inline-block{
+    /* display: inline; LOS ELEMENTOS QUE TENGAN ESTA PROPIEDA NO SE LE PUEDE ASIGNAR WIDHT NI HEIGHT */
+    height: 55px;
+    background-color: red;
+}
+
+
+/* COLOCANDO UN ANCHO Y MARGIN PARA ALINEAR EL ELEMENTO Y TEXTO */
+.center{
+width: 200px;
+margin: 0 auto;/*PARA CENTRAR ELEMENTOS*/
+background-color: aqua;
+text-align: center;
+}
+
