@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+}
+
+.container{
+    margin: 50px auto;
+    width: 90%;
+    height: 500px;
+
+/* background: ; */
+    background-color: red;
+    /* background-image: url(img/spiderman.png); */
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.669),rgba(255, 0, 0, 0.676)) , url(imagen.jpg);
+    background-repeat: no-repeat;
+    background-position:center; 
+      /* top-left-right-bottom-center */
+    background-size: cover;
+
+}
+
+.title{
+    font-size: 42px;
+    
+    /** color: gold; 
+    **1- MANERA DE AGREGAR COLOR, CON UNA PALABRA CLAVE*/
+    
+    /** color: rgb(red, green, blue, .5)
+    **2-AGREGAR COLOR CON RGB, EL PRIMERO ES EL ROJO-VERDE-AZUL,EL MINIMO ES 0 Y MAXIMO ES 255
+    **TAMBIEN PUEDE HABER UN 4 VALOR QUE ES LA TRANSPARENCIA */
+
+/* *color: #0000ff73;
+*3-AGREGAR COLOR CON HEXADECIMAL, LO MISMO QUE CON RGB, 2ROJO-2VERDE-2AZUL-EL MINIMO ES 0 MAXIMO F */
+
+/** color: hsl(hue, saturation, lightness,.3);
+**TONO O MATIZ DEL COLOR-MINIMO 0 MAXIMO 360
+**SATURACION DEL COLOR-SE UTILIZA PORCENTAJES
+**LA LUMINOCIDAD- SE UTILIZAN PORCENTAJES--SE RECOMIENDA USARLO AL 50% 
+** EL CUARTO VALOR ES LA TRANSPARENCIA*/
+
+color: hsl(210, 80%, 90%,.8);
+}
