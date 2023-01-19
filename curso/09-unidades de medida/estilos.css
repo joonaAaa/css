@@ -1,19 +1,51 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unidades de medida</title>
-    <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
 
-    <section class="container">
-        <div class="container-child">
-            <h2 class="title">¡Hola mundo!</h2>
-        </div>
-    </section>
-    
-</body>
-</html>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    padding: 40px;
+}
+
+.container-child{
+    /* ESTE ES EL ANCESTRO MAS CERCANO Y DE ACA TOMA LA MEDIDA EL EM */
+    font-size: 5px;
+}
+
+/*! UNIDADES ABSOLUTAS:TIENEN UN VALOR DEFINIDO QUE NUNCA CAMBIARA */
+
+/* px: pixeles
+cm: centimetros
+pt: puntos
+ml: milimetros */
+
+
+
+/*! UNIDADES DE LONGITUD RELATIVA: SU TAMAÑO DEPENDE DE ALGO EXTERNO A ELLAS, PUEDE CAMBIAR  */
+
+/* rem: es relativa al tamaño del font size de la raiz del documento en la mayoria de caso
+- 1rem-16px */
+/*? font-size:3rem: == font-size:40px; */
+
+
+/* em:es muy similar a rem solo que em es relativo al tamaño de fuente del padre o de un acestro superior que tenga declarado un font-size
+ 1em-15px */
+ /*? font-size:3em; ==font-size:15px; */
+
+
+ /*! UNIDADES DE VIEWPORT:SON RELATIVAS AL VIEWPORT */
+/* 
+ vw:(viewport width) es relativa al tamaño del viewport-0 a 100 */
+ /*? width:50vw; */
+
+
+/* vh: (viewport height)es relativa al tamaño del viewport- 0 a 100 */
+/*? height:100vh */
+
+
+ /* %: son relativos al tamaño del padre del elemento al cual le estamos dando el porcentaje */
+ /*?width:100%; */

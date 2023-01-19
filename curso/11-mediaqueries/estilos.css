@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.img{
+display: block;
+width: 90%;
+margin: 0 auto;
+margin-top: 30px;
+}
+
+
+/*! MEDIAQUERIES */
+
+
+
+/* INDICA CUAL SERA EL VALOR MAXIMO QUE DEBE TENER EL WIDTH PARA QUE ENTRE EL MEDIAQUERY 
+OSEA DEBE TENER UN WIDTH MENOS DE 600 PARA QUE ENTRE EL MEDAQUERY*/
+@media  (max-width: 600px){
+body{
+background-color: black;
+}
+
+}
+
+
+/* INDICA CUAL SERA EL VALOR MINIMO QUE DEBE TENER EL WIDTH PARA QUE ENTRE EL MEDIAQUERY 
+OSEA DEBE TENER UN WIDTH MAYOR DE 600 PARA QUE ENTRE EL MEDAQUERY*/
+@media  (min-width: 600px){
+    body{
+    background-color: rgb(193, 6, 6);
+    }
+    
+    }
+    

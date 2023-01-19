@@ -1,0 +1,62 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #320da8;
+}
+
+.card{
+    background-color: #fff;
+    padding-bottom: 30px;
+    width: 270px;
+    margin: 30px;
+}
+
+.card__texts{
+    padding: 30px 20px;
+}
+
+.card__img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card__title{
+    color: red;
+
+    /*DEFINE UNA LISTA DE FUENTES PARA LA LETRAS,SI NO FUNCIONA LA PRIMERA PRUEBA CON LA SEGUNDA ..... */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+
+    /* DEFINE EL PESO DE LA FUENTE(BOLD,100,300 ETC) */
+    font-weight:bold ;
+
+    /* DEFINE EL ESTILO DE LA FUENTE SI ES ITALICA O NORMAL */
+    /*? font-style:italic ; */
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.card__paragraph{
+    background-color: yellow;
+
+    /* PERMITE DEFINIR LA ALINEACION DEL TEXTO */
+    text-align:center ;
+    
+    /* PERMITE DEFINIR EL TAMAÑO DE LA LINEA DEL TEXTO */
+    line-height: 16px;
+
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.card__cta{
+    background-color: #320da8;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-weight: 300;
+}

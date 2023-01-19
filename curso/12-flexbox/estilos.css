@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial';
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    min-height: 600px;
+    margin: 80px auto;
+    border: 3px solid #000;
+
+
+    /*! PERMITE PONER UN ELEMENTO AL LADO DEL OTRO */
+    display: flex;
+    /*? MAIN AXIS: EJE PRINCIPAL(izquierda-derecha) */
+    /* ?CROX AXIN: EJE SECUNDARIO(arriba-abajo) */
+
+
+    /*! NOS PERMITE CAMBIAR EL MAIN AXIS, LA DIRECCION  */
+    /*? flex-direction: row; */
+    /* row | row-reverse | column | column-reverse  */
+
+    /*! DEFINE EL COMPORTAMIENTO DE LOS HIJOS CUANDO REBASAN O SE DESBORDAN- SE CREAN NUEVAS LINEAS A PARTIR DEL CROX AXIS */
+    /*? flex-wrap: nowrap; */
+    /* wrap | wrap-reverse    */
+
+    /*!PARA CAMBIAR LA ALINEACION EN EL MAIN AXIS, HAY QUE TENER ESPACIO DISPONIBLE EN EL EJE PRINCIPAL */
+    /*? justify-content: flex-end; */
+    /* flex-start | flex-end      | center           | space-between                     | space-around                       |space-evenly
+                                 ESPACIO ENTRE CADA UNO PEGANDOSE AL PRINCIPIO Y FINAL- ESPACIO ENTRE CADA UNO SIN PEGARSE AL PRINCIPIO-ESPACIO CADA UNO EQUITATIVAMENTE*/
+
+
+    /*! PARA CAMBIAR LA ALINEACION DEL CROX AXIN  */
+    /*? align-items: none; */
+    /* stretch | flex-start  | flex-end  | center |   */
+
+
+    /*! CUANDO UN ELEMENTO O MAS SE DESBORDAN */
+    /*? align-content: center; */
+    /* flex-start | flex-end | center | space-between  | space-around | space-evenly */
+
+    align-items: center;
+}
+
+.element {
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 100px;
+    /* width: 300px;
+    height: 100px; */
+
+
+    /*! SI HAY ESPACIO SOBRANTE LE DECIMOS QUE ABARQUEN TODO EL CONTENEDOR */
+    /*? flex-grow: 1; */
+
+
+    /*! INDICA EL TAMAÑO DE LOS ELEMENTOS EN EL MAIN AXIS- ES MAS ESPECIFICO QUE WIDHT */
+    flex-basis: 150px;
+}
+
+.element1 {
+    background-color: crimson;
+
+    /* !PERMITE CAMBIAR EL ORDEN DE LOS FLEX-ITEM, EL MAS CHICO VA PRIMERO*/
+    order:2 ;
+}
+
+.element2 {
+    background-color: purple;
+    order: 1;
+
+    /*! LO DIFERENTE DE FLEX-GROW, SI HAY UN FLEX-ITEM CON FLEX-SHRINK MAS ALTO , ESTE DISMINURIA SU TAMAÑO */
+    flex-shrink: 10;
+}
+
+.element3 {
+    background-color: steelblue;
+
+    /*! MIENTRAS MAS TENGA FLEX-GROW UN FLEX-ITEMS ESTE ABARCARA MAS  EL ANCHO DEL CONTAINER,DEPENDIENDO CUANTO LE COLOQUEMOS */
+    /*? flex-grow: 2; */
+
+    /*! PERMITE MODIFICAR LA ALINEACION EN EL CROX AXIN, SOLO EL ELEMENTO SELECCIONADO */
+    align-self:flex-start ;
+    /* stretch | flex-start  | flex-end  | center |   */
+}
+
+
+
+/*! flexbox:sitios webs adaptables a cualquier dispositivo */

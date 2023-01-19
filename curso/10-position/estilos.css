@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* body{
+    min-height: 500vh;
+} */
+
+.container{
+    width: 90%;
+    margin: 40px auto;
+    border: 4px solid ;
+    min-height: 500px;
+    /* position: relative; */
+}
+
+.element{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.static{
+    background-color: tomato;
+
+    /*! POR DEFECTO TODOS LOS ELEMENTOS TIENEN STATIC */
+    position: static;
+}
+
+.relative{
+    background-color: steelblue;
+
+    /*! TODOS LOS ELEMENTOS POSICIONADOS  DESBLOQUEA 4 VALORES, QUE LE PERMITE DEPLAZAR EL ELEMENTO */
+    position: relative;
+left: 30px;
+    /* top:50px ;
+    right:50px ;
+    bottom:50px ;
+    left:50px ; 
+    RECUERDA PODEMOS USAR VALORES NEGATIVOS PARA MOVER EL ELEMENTO AL LADO CONTRARIO*/
+
+    
+z-index: 1;
+
+}
+
+.absolute{
+    background-color: teal;
+
+    /*!CON ABSOLUTE EL ELEMENTO ES REMOVIDO DEL FLUJO, YA NO TIENE EL ESPACIO RESERVADO */
+    /* SE POSICIONA EN BASE A UN ANCESTRO CON TENGA UN POSITION DECLARADO Y DIFERENTE A STATIC */
+    /*? position: absolute; */
+
+}
+
+.fixed{
+    background-color: crimson;
+
+    /*! SE REMUEVE DEL FLUJO, LA DIFERENCIA ES QUE SE POSICIONA EN EL VIEWPORT Y SE QUEDA PEGADO AHI */
+   position: fixed;
+   top: 80px;
+
+   /* SI DOS ELEMENTOS ESTAN ENCIMA CADA UNO, CON Z-INDEX PODEMOS CAMBIAR ESA POSICION DE CUAL SE MUESTRA PRIMERO */
+   /*? EL QUE TENGA UN VALOR MAS GRANDE QUE EL OTRO ES EL PRIMERO EN MOSTRARSE(100-200-300-400 ....) */
+   z-index: auto;
+}
