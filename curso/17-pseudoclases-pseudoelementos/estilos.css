@@ -1,0 +1,119 @@
+/*! PSEUDOCLASES SON UN TIPO DE SELECTOR QUE INDICAN EL ESTADO DEL ELEMENTO */
+/* EJ: :root*/
+
+/*! PSEUDOELEMENTOS PERMITEN CREAR ESTILOS EXTRA
+EJ : ::after */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: Arial;
+}
+
+.link{
+    margin: 50px;
+    display: inline-block;
+    background-color: slateblue;
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 2em;
+    border-radius: 2em;
+    transition: .3s;
+}
+
+.link:hover{
+background-color: black;
+transform: translatey(10px);
+}
+
+.element1{
+    background-color: tomato;
+    width: max-content;
+    font-size: 2rem;
+    color: #fff;
+    margin: 50px;
+}
+
+.element1::before{
+    content: "voy antes";
+    display: block;
+    width: 100px;
+    height: 50px;
+    background-color: black;
+}
+
+
+.element1::after{
+    content: "voy despues";
+    display: block;
+    width: 100px;
+    height: 50px;
+    background-color: rgb(10, 252, 119);
+}
+/* !TARGET ES CUANDO REFERENCIAMOS EN EL HTML (A HREF...) Y QUEREMOS MODIFICAR ALGO CON ESE ID  */
+.element1:target{
+    transform: translatex(100%);
+}
+
+
+.check{
+    margin: 50px 20px;
+}
+
+
+/*!CUANDO UN INPUT TIPO RADIO O CHECKBOX O SELECT ESTEN ACTIVO LO MODIFICA */
+/* SI LA CLASE CHECK ESTA EN ESTADO CHEKED + LA CLASE LABEL SE MODIFICARA */
+.check:checked + .label{
+background-color: green;
+}
+
+.label{
+    background-color: crimson;
+    color: #fff;
+    padding: 20px 15px;
+}
+
+
+
+/* .input{
+    margin: 50px;
+    width: 250px;
+    height: 70px;
+} */
+
+/*! CUANDO EL USUARIO ESTA HACIENDO FOCO O ESTA ACTIVO EN UN INPUT */
+/*? .input:focus{
+    color: #fff;
+    background-color: black;
+} */
+
+
+.validacion{
+    padding: .5em 2em;
+    margin: 50px;
+    font-size: 1rem;
+}
+
+.validacion + .message::after{
+    content: "Felicidades, has ingresado un texto";
+    display: block;
+    background-color: green;
+    padding: 1em;
+    color: #fff;
+    margin: 0 auto;
+    width: max-content;
+}
+
+.validacion:placeholder-shown + .message::after{
+    content: "Aún no has escrito nada en el input";
+    display: block;
+    background-color: crimson;
+    padding: 1em;
+    color: #fff;
+    margin: 0 auto;
+    width: max-content;
+}
+

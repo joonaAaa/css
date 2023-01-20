@@ -1,0 +1,46 @@
+/*! CREACION DE CUSTOM PROPERTIES O VARIABLES */
+:root{
+    --border-titulo:red;
+
+}
+
+
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title{
+    color: royalblue;
+background-color: var(--border-titulo);
+}
+
+.paragraph{
+    color: royalblue;
+}
+
+
+.container{
+
+    /*! SE PUEDE CREAR VARIABLES EN CUALQUIER CODIGO CSS, SOLAMENTE FUNCIONARIA EN LOS HIJOS DE DONDE SE CREA LA VARIABLE  */
+--border:pink;
+
+}
+
+.cta{
+    background-color: var(--border);
+    display: block;
+    padding: 20px 0;
+    border-radius: 30px;
+    text-align: center;
+    width: 200px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-decoration: none;
+}

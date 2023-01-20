@@ -1,0 +1,151 @@
+/*! CSS GRID */
+/*! LINEAS VERTICALES:COLUMNAS(COLUMN)*/
+/*!LINEAS HORIZONTALES:FILAS(ROW) */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial';
+}
+
+.container {
+    width: 90%;
+    height: 1200px;
+    outline: 2px solid;
+    margin: 40px auto;
+    display: grid;
+
+    /*! PARA CREAR COLUMNAS */
+     /* SEPARANDOLO CON UN ESPACIO PODEMOS CREAR MAS COLUMNAS */
+    /*? grid-template-columns: 30% 50px 100px; */
+
+    /*! CON REPEAT PODEMOS CREAR COLUMNAS */
+     /*1VALOR-NUMERO DE VECES QUE SE CREA UNA COLUMNA O FILA
+     2VALOR-EL VALOR QUE TENDRA ESA FILA O COLUMNA */
+    /*? grid-template-columns: repeat(3, 33%); */
+
+   /*  1FR= 1 FRACCION-SIGNIFICA QUE EL ESPACIO DISPONIBLE LO VA DIVIDIR EQUITATIVAMENTE
+    EN RESUMEN, NO SOBRARA ESPACIO CON FR Y ES MEJOR UTILIZAR ESTA MEDIDA */
+    /*? grid-template-columns: repeat(5, 1fr); */
+
+/*! SI QUEREMEOS CREAR COLUMNAS DINAMICAMENTE */
+/* PRIMERO EL AUTO-FIT(SE AJUSTE AL TAMAÑO) 
+MINMAX- TAMAÑO MINIMO QUE VA A TENER LA COLUMNA(250PX) Y EL MAXIMO(1FR) */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    /*! PARA CREAR FILAS */
+    /* ?grid-template-rows: repeat(5, 1fr); */
+
+
+
+    /*! FILAS QUE SE CREAN AUTOMATICAMENTE */
+    /* CON ESTO PODEMOS ASIGNAR UN VALOR A LAS FILAS QUE SE CREAN AUTOMATICAMENTE
+    EJ:CADA FILA QUE SE CREE TENDRA UN VALOR DE 100PX */
+    /*? grid-auto-rows: 100px; */
+
+    /*! PERMITE DAR ESPACIADO ENTRE FILAS */
+    /*? row-gap:1em ; */
+
+
+    /*! PERMITE DAR ESPACIADO ENTRE COLUMNAS */
+    /* ?column-gap: 1em; */
+
+    /*! PERMITE DAR UN ESPACIADO ENTRE COLUMNAS Y FILAS*/
+    gap:10px ;
+
+
+    /*! DAR UN AREA A LOS GRID-ELEMENT */
+    /* PRIMERO COLOCAMOS LAS CANTIDAD DE COLUMNAS QUE TENEMOS(5 EN ESTE CASO)
+    LUEGO LE ASIGANMOS UN NOMBRE X
+    LE ASIGNAMOS EL AREA*/
+    /*? grid-template-areas:  */
+    /* ?"element1 element1 element1 element2 element2" */
+    /* QUIERO QUE ELEMENT1 ESTE 3 VECES EN COLUMNA Y ELEMENT2 ESTE 2 VECES AL FINAL */
+    /* ?"element1 element1 element1 element2 element2" */
+    /* ?"element3 element3 element3 element2 element2" */
+    /*? "element3 element3 element3 element2 element2" */
+    /*? "element4 element4 element4 element4 ." */
+    /*! SI QUEREMOS QUE UNA CELDA ESTE VACIA SOLO SE COLOCARA UN PUNTO */
+    
+}
+
+.item {
+    /* width: 100px; 
+    height: 100px; */
+    color: #fff;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position:center ;
+}
+
+.item1 {
+    background-color: slateblue;
+
+    /*! PERMITE DAR UN AREA AL GRID-ELEMENT EN COLUMNA */
+      /* LINEA INCIAL | LINEA FINAL */
+    /* ?grid-column:1/4; */
+
+
+    /*! PERMITE DAR UN AREA AL GRID-ELEMENT EN FILA */
+      /* LINEA INCIAL | LINEA FINAL */
+    /*? grid-row: 1/3; */
+
+    /* grid-area: element1; */
+
+    background-image: url("img/image1.jpg");
+}
+
+.item2 {
+    background-color: deeppink;
+    /* grid-column:4/6;
+    grid-row: 1/5; */
+
+    /*! PARA LLAMAR A LAS AREAS CREADAS ANTERIORMENTE USAMOS GRID-AREA */
+    /*? grid-area: element2; */
+
+    background-image: url("img/image2.jpg");
+
+}
+
+.item3 {
+    background-color: seagreen;
+    /* grid-column:1/4;
+    grid-row: 3/5; */
+
+    /* grid-area: element3; */
+
+    background-image: url("img/image3.jpg");
+
+}
+
+.item4 {
+    background-color: brown;
+
+    /*! -1- AUNQUE SE AGRANDE LA GRID, SIEMPRE VA A LLEGAR AL FINAL  */
+        /*? grid-column:1/-1; */
+
+        /* grid-area: element4; */
+
+        background-image: url("img/image4.jpg");
+
+}
+
+.item5 {
+    background-color: cornflowerblue;
+
+    background-image: url("img/image5.jpg");
+
+}
+
+.item6 {
+    background-color: purple;
+
+    background-image: url("img/image6.jpg");
+
+}
