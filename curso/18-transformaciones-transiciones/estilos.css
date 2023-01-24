@@ -1,10 +1,10 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
-body{
-    font-family: 'Arial';
+body {
+  font-family: "Arial";
 }
 
 .container{
@@ -12,38 +12,84 @@ body{
     display: flex;
 }
 
-.element{
-    /* transform:translate(200px, 200px); */
-    /* transform: rotate(2turn); */
-    /* transform:scale(2,1); */
+.element {
+  margin: 60px;
+  width: 200px;
+  height: 200px;
+  background-color: tomato;
 
-    /* 
-    0-360 deg
-    0-400 grad
-    0-6.28319 rad
-    0-1 turn
 
-    */
+    /*! ESPECIFICA LA PROPIEDA O PROPIEDADES QUE TENDRAN LA TRANSICION(QUE ELEMENTO CSS PODRA SE ANIMABLE) */
+    /* se recomienda que solo se coloquen las propiedades que se van a usar(transform,background-color.....)  */
+      /*todo-- transition-property: all; */
 
-    margin: 60px;
-    width: 200px;
-    height: 200px;
-    background-color: tomato;
-    
-    /* transition-property: background-color, transform, opacity;
-    transition-duration: 500ms;
-    transition-timing-function: linear;
-    transition-delay: 0s; */
 
-    
-    transition:.3s;
-    
-    /* s ms */
+    /*! DEFINE LA DURACION DE LA TRANSICION */
+      /*todo-- transition-duration:1s ; */
+    /*? segundo-s */
+    /*? milisegundo-ms */
+
+
+    /*! DEFINE LA CURVA DE ACELERACION DE LA TRANSICION ENTRE EL ESTADO INCIAL Y EL FINAL(ES DECIR COMO SE COMPORTA LA TRANSICION) */
+      /*todo-- transition-timing-function:ease-in-out ; */
+
+    /*ease primero acelera al final decrementa la velocidad
+    ease-in- comienza lento despues aumenta
+    ease-in-out  comienza lento,acelera y despues disminuye
+    ease-out comienza rapido y despues disminuye
+    linear siempre sera la misma velocidad  */
+
+
+
+    /*! DEFINE UN EL TIEMPO DE ESPERA PARA QUE UNA TRANSITION SE EJECUTE */
+      /*todo--transition-delay:1s ; */
+
+
+    /*! TRANSFORM-NOS PERMITE AGREGAR TRANFORMACIONES, NOS PERMITEN ESCALAR , ROTAR Y TRASLADAR AL ELEMENTO */
+    /* translate-permite trasladar a un elemento por coordenadas x-y */
+      /*todo-- transform: translate(200px,100px); */
+                 /*?translatex*//*translatey */
+
+    /*! PARA ROTAR UN ELEMENTO */
+      /*todo-- transform: rotate(90deg); */
+    /*? 0-360 deg(grados) */
+    /*?0-400 grad (gradianes) */
+    /*? 0-6.28319 rad (radianes) */
+    /*? 0-1 turn(vueltas) */
+
+     /*! PERMITE AUMENTAR O DECREMENTAR EL VALOR DE UN ELEMENTO */
+    /* permite solo valores enteros(1-1,5.2.10 ....) */
+      /*todo-- transform:scaleX(1.5) ; */
+    /*? osea si mide 200px el elemento y le coloco 1.5(200x1.5=300) */
+
+    /*? para decrementar solo coloco un (.1-.2-.3-.4....) */
+     /*todo-- transform: scaleX(0.7); */
+
+     /* todo--transform: scale(2, .5); */
+            /* scaleX | scaleY  */
+
+
+    /*! PARA SESGAR UN ELEMENTO */
+     /* todo-- transform: skewX(70deg); */
+    /*? 0-360 deg(grados) */
+    /*?0-400 grad (gradianes) */
+    /*? 0-6.28319 rad (radianes) */
+    /*? 0-1 turn(vueltas) */
+
+
+        /*! TRANSICIONES-ES UN CAMBIO DE UN ESTADO A OTRO
+    ES UN SHORTHUND , TIENE TODOS LO VALORES VISTOS MAS ARRIBA */ 
+  transition: 1s;
+
+            
+
 }
 
+.container:hover .element {
+  /*! DE DONDE EMPIEZA A AUMENTAR SU TAMAÑO EN UNA TRANSFORMACION */
+   /* todo-- transform-origin: left top; */
 
-.container:hover .element{
-    opacity: .6;
-    background-color: #000;
-    transform: translate(100%, 100%) scale(1.3)  rotate(80deg);
+  transform: translate(100%, 100%) scale(1.3) rotate(80deg);
+   /* el orden de las transformaciones si afecta el resultado */
+
 }

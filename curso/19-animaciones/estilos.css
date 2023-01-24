@@ -2,10 +2,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 body{
     display: flex;
-    height: 100vh;
+    height: 100vw;
 }
 
 .box{
@@ -13,53 +12,100 @@ body{
     height: 200px;
     margin: 60px;
     background-color: tomato;
-    animation-name: cambiar-color;
-    /* animation-name: grow; */
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    /* animation-direction: alternate-reverse; */
-    animation-fill-mode:both ;
-    animation-delay: 2s;
 
-    animation:cambiar-color 2s 1s linear infinite alternate both  running;
+    /*! REFERENCIA AL KEYFRAMES  */
+     animation-name: cambiar-color2;
+
+    /*! DEFINE LA DURACION DE LA ANIMACION */
+     animation-duration: 5s;
+
+
+    /*!ESPECIFICA LA VELOCIDAD DE LA ANIMACION */
+     animation-timing-function:ease-in ;
+    /*ease primero acelera al final decrementa la velocidad
+    ease-in- comienza lento despues aumenta
+    ease-in-out  comienza lento,acelera y despues disminuye
+    ease-out comienza rapido y despues disminuye
+    linear siempre sera la misma velocidad  */
+
+
+    /* !DEFINE CUANTAS VECES SE REPETIRA LA ANIMACION */
+      animation-iteration-count:infinite ;
+
+    /*! DEFINE DESDE QUE PUNTO PARTE LA ANIMACION(EMPIEZA EN O% O En 100% ....) */
+     /*? animation-direction:alternate; */
+    /* reverse | alternate:hace que la animacion no pierda esa animacion, ya no seria de golpe*/
+
+    /*! DEFINE LO QUE SUCEDE ANTES Y DESPUES DE QUE UNA ANIMACION SE TERMINE*/
+     animation-fill-mode:both;
+    /* forwards-se queda con el ultimo valor dado en css, osea si la keyframes termina en background-color: black, asi se quedara el elemento */
+    /* backwards- empieza la animacion con el valor del keyframes */
+    /* both- ambos forwards-backwards */
+
+
+    /*! PARA ESPECIFICAR CUANTO TIEMPO SE DEMORARA LA ANIMACION EN EJECUTARSE */
+      animation-delay:1s ;
+
+
+
+      /*! ES UN SHORTHAND DE TODO LOS ELEMENTOS VISTO MAS ARRIBA  */
+    animation: cambiar-color 2s 1s linear infinite alternate both running;
 }
 
-/* .box:hover{
+
+.box:hover{
+
+    /*! PARA PAUSAR LA ANIMACION */
     animation-play-state: paused;
-} */
+}
 
+
+    /*! LOS KEYFRAMES PERMITE CONTROLAR Y DECLARAR LOS PASOS EN UNA ANIMACION */
 @keyframes cambiar-color{
-    0%{
-        transform: translate(0);
-        background-color: crimson;
-    }
-    25%{
-        transform: translate(100%);
-        background-color: salmon;
-    }
-    50%{
-        transform: translate(100%, 100%);
-        background-color: slateblue;
-    }
-    75%{
-        transform: translate(0, 100%);
-        background-color: teal;
-    }
-    100%{
-        transform: translate(0);
-        background-color: black;
-    }
+
+    /*! FROM:D0NDE EMPIEZA LA ANIMACION  */
+    /* from puede ser representado con 0% */
+     from{
+      transform: scaleY(1);
 }
 
-@keyframes grow {
-    0%{
-        transform: scaleX(1.5);
-    }
-    100%{
-        transform: scaleX(2.5);
-    }
+    /*! TO: DONDE TERMINA LA ANIMACION */
+    /* to puede ser representado con 100% */
+     to{
+      width: 300px;
+      background-color: rgb(9, 255, 25);
 }
+}
+
+/*! LAS KEYFRAMES TAMBIEN SE PUEDEN HACER CON PORCENATAJES E IR SUBIENDO HASTA EL 100% */
+@keyframes cambiar-color2{
+
+   0%{
+    transform: translate(0);
+    background-color: crimson;
+   }
+
+   25%{
+    transform: translate(100%);
+    background-color: salmon;
+   }
+
+   50%{
+    transform: translate(100%, 100%);
+    background-color: slateblue;
+   }
+
+   75%{
+    transform: translate(0 , 100%);
+    background-color: teal;
+   }
+
+   100%{
+    transform: translate(0);
+    background-color: rgb(0, 0, 0);
+   }
+}
+
 
 .bell{
     background-color: #3d3dcf;
